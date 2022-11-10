@@ -9,4 +9,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v3
+      - name: Print dir
+        shell: pwsh
+        run: |
+          Write-Host $PSScriptRoot
       - uses: gkurbesov/gha-test@main
