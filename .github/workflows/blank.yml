@@ -1,4 +1,4 @@
-name: Reference check
+name: Reference check again
 
 on: pull_request
 
