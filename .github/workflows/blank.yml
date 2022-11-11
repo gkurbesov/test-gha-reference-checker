@@ -14,3 +14,4 @@ jobs:
         shell: pwsh
         run: |
           Write-Host "\u001b[35mJob is completed"
+          Write-Out "\u001b[35mJob is completed-2"
