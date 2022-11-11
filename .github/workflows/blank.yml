@@ -15,5 +15,5 @@ jobs:
       - name: Print dir
         shell: pwsh
         run: |
-          Get-ChildItem -Path "/github/workspace" | Write-Output
+          Get-ChildItem -Path "${{ github.workspace }}" -Recurse | Write-Output
       - uses: gkurbesov/gha-test@main
