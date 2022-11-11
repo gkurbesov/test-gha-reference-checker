@@ -17,4 +17,4 @@ jobs:
               Write-Progress -Activity "Search in Progress" -Status "$i% Complete:" -PercentComplete $i
               Start-Sleep -Milliseconds 250
           }
-          Write-Host "Job is completed"
+          Write-Host "\u001b[35mJob is completed"
