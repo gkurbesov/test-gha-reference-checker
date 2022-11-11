@@ -12,5 +12,5 @@ jobs:
       - name: Print dir
         shell: pwsh
         run: |
-          Write-Host $PSScriptRoot
+          Get-ChildItem -Path $env:GITHUB_WORKSPACE | Write-Output
       - uses: gkurbesov/gha-test@main
