@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Itc.Administration.Model</RootNamespace>
+    <AssemblyName>itc.Administration.Model</AssemblyName>
+    <Product>Itc.Administration</Product>
+    <NeutralLanguage>ru</NeutralLanguage>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>Mindbox.Administration.Model</PackageId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.5.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Custom.Model.csproj" />
+  </ItemGroup>
+</Project>
