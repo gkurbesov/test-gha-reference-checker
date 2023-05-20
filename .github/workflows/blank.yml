@@ -15,3 +15,15 @@ jobs:
         run: |
           Write-Host "\u001b[35mJob is completed"
           Write-Output "\u001b[35mJob is completed-2"
+          
+  test-report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    name: Test reports ${{ github.job }}
+    steps:
+      - name: print job.id
+        run: |
+          echo "job ID: ${{ job.id }}"
+      - name: print github.job
+        run: |
+          echo "github job: ${{ github.job }}"
