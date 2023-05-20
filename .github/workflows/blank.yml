@@ -1,4 +1,4 @@
-name: Reference check
+name: Reference check again
 
 on: pull_request
 
@@ -9,22 +9,21 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - uses: gkurbesov/gha-test@main
+      - name: Print completed
         shell: pwsh
         run: |
-          .\check.ps1
+          Write-Host "\u001b[35mJob is completed"
+          Write-Output "\u001b[35mJob is completed-2"
           
   test-report:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    name: Test reports ${{ github.job }}
+    name: Test reports
     steps:
-      - name: print job.id
+      - name: print job.name
         run: |
-          echo "job ID: ${{ github.workflow }}"
+          echo "job name: ${{ job.name }}"
       - name: print github.job
         run: |
           echo "github job: ${{ github.job }}"
-  
