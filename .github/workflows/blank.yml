@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: print job.id
         run: |
-          echo "job ID: ${{ job.id }}"
+          echo "job ID: ${{ github.workflow }}"
       - name: print github.job
         run: |
           echo "github job: ${{ github.job }}"
