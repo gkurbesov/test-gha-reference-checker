@@ -10,6 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: install pwsh
+        run: |
+          snap install powershell --classic
+          pwsh -v
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         shell: pwsh
